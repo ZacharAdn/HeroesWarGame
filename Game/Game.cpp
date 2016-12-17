@@ -25,18 +25,14 @@
 
 
 
-Game::Game() {
-
-    heroes = new vector<Hero*>();
-    enemies = new vector<EnemyCharacter*>();
-    Characters = new unordered_map<Point2d*,Character*>();
-    Items =  new vector<Item*>();
-    outputVec = new vector<Character*>();
-
-}
+Game::Game(string adress)
+        : adress(adress), heroes(new vector<Hero*>()), enemies(new vector<EnemyCharacter*>()),
+          Characters(new unordered_map<Point2d*,Character*>()), Items(new vector<Item*>()),
+          outputVec(new vector<Character*>())
+{}
 
 
-void Game::read(string adress) {
+void Game::read() {
     ifstream file (adress, ifstream::in);
     string value;
     int heroCounter= 0,enemyCounter=0;
@@ -63,76 +59,76 @@ void Game::read(string adress) {
 
         } else if (value.find("warrior") != string::npos) {
             string name = "Warrior " + to_string(heroCounter++);
-            hero = new Warrior(FULL_HP, getPowerFromFile(file), *getPointFromFile(file), *getPointFromFile(file), name,
-                              getGenderFromFile(file));
+            hero = new Warrior(FULL_HP, readDoubleFromFile(file), *readPoint2DFromFile(file), *readPoint2DFromFile(file), name,
+                               readIntFromFile(file));
             Characters->emplace(hero->getStartLocation(),hero);
             heroes->push_back(hero);
 
         } else if (value.find("wizard") != string::npos) {
             string name = "Wizard "+to_string(heroCounter++);
-            hero = new Wizard(FULL_HP, getPowerFromFile(file), *getPointFromFile(file), *getPointFromFile(file), name,
-                               getGenderFromFile(file));
+            hero = new Wizard(FULL_HP, readDoubleFromFile(file), *readPoint2DFromFile(file), *readPoint2DFromFile(file), name,
+                              readIntFromFile(file));
             Characters->emplace(hero->getStartLocation(),hero);
             heroes->push_back(hero);
 
         } else if (value.find("archer") != string::npos) {
             string name = "Archer "+to_string(heroCounter++);
-            hero = new Archer(FULL_HP, getPowerFromFile(file), *getPointFromFile(file), *getPointFromFile(file), name,
-                              getGenderFromFile(file));
+            hero = new Archer(FULL_HP, readDoubleFromFile(file), *readPoint2DFromFile(file), *readPoint2DFromFile(file), name,
+                              readIntFromFile(file));
             Characters->emplace(hero->getStartLocation(),hero);
             heroes->push_back(hero);
 
         } else if (value.find("enemy") != string::npos) {
-            enemy = new Enemy(FULL_HP,getPowerFromFile(file), *getPointFromFile(file), *getPointFromFile(file));
+            enemy = new Enemy(FULL_HP, readDoubleFromFile(file), *readPoint2DFromFile(file), *readPoint2DFromFile(file));
             enemy->setName("Enemy"+to_string(enemyCounter++));
             Characters->emplace(enemy->getStartLocation(),enemy);
             enemies->push_back(enemy);
 
         } else if (value.find("elite") != string::npos) {
-            enemy = new Elite(FULL_HP,getPowerFromFile(file), *getPointFromFile(file), *getPointFromFile(file));
+            enemy = new Elite(FULL_HP, readDoubleFromFile(file), *readPoint2DFromFile(file), *readPoint2DFromFile(file));
             enemy->setName("Elite Enemy"+to_string(enemyCounter++));
             Characters->emplace(enemy->getStartLocation(),enemy);
             enemies->push_back(enemy);
 
         } else if (value.find("mana") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new mana(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new mana(*readPoint2DFromFile(file), power));
 
         } else if (value.find("health") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new health(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new health(*readPoint2DFromFile(file), power));
 
         } else if (value.find("bodyarmor") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new BodyArmor(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new BodyArmor(*readPoint2DFromFile(file), power));
 
         } else if (value.find("shieldarmor") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new ShieldArmor(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new ShieldArmor(*readPoint2DFromFile(file), power));
 
         } else if (value.find("sword") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new Sword(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new Sword(*readPoint2DFromFile(file), power));
 
         } else if (value.find("hammer") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new Hammer(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new Hammer(*readPoint2DFromFile(file), power));
 
         } else if (value.find("bow") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new Bow(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new Bow(*readPoint2DFromFile(file), power));
 
         } else if (value.find("crossbow") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new CrossBow(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new CrossBow(*readPoint2DFromFile(file), power));
 
         } else if (value.find("staff") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new Staff(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new Staff(*readPoint2DFromFile(file), power));
 
         } else if (value.find("wand") != string::npos) {
-            power = getPowerFromFile(file);
-            Items->push_back(new Wand(*getPointFromFile(file), power));
+            power = readDoubleFromFile(file);
+            Items->push_back(new Wand(*readPoint2DFromFile(file), power));
 
         }
     }
@@ -217,20 +213,20 @@ void Game::update(const string &type, const string &name) {
 }
 
 
-double Game::getPowerFromFile(ifstream &file) {
+double Game::readDoubleFromFile(ifstream &file) {
     string value;
     getline(file, value, ',');
     return stod(value.c_str());
 }
 
 
-int Game::getGenderFromFile(ifstream &file) {
+int Game::readIntFromFile(ifstream &file) {
     int i;
     file >> i;
     return i;
 }
 
-Point2d* Game::getPointFromFile(ifstream &file) {
+Point2d* Game::readPoint2DFromFile(ifstream &file) {
     int x,y;
     string value;
 

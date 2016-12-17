@@ -27,9 +27,9 @@ using namespace std;
 class Game {
 public:
 
-    Game();
+    Game(string adress);
 
-    void read(string adress);
+    void read();
 
     void update(const string &type, const string &name);
 
@@ -37,6 +37,7 @@ public:
 
 
 private:
+    string adress;
     unordered_map<Point2d*,Character*> *Characters;
     vector<Item*> *Items;
     vector<Hero*> *heroes;
@@ -48,11 +49,11 @@ private:
 
     const unordered_map<Point2d*,Character*> &getCharacters() const;
 
-    double getPowerFromFile(ifstream &ifstream);
+    double readDoubleFromFile(ifstream &ifstream);
 
-    Point2d* getPointFromFile(ifstream &ifstream);
+    Point2d* readPoint2DFromFile(ifstream &ifstream);
 
-    int getGenderFromFile(ifstream &file);
+    int readIntFromFile(ifstream &file);
 
     void calcHeroTrack(Hero *pHero);
 
