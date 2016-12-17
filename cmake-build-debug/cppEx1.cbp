@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cppEx1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/zahar/ClionProjects/cppEx1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/zahar/ClionProjects/cppEx1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/zahar/ClionProjects/cppEx1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cppEx1">
+				<Option output="/home/zahar/ClionProjects/cppEx1/cmake-build-debug/cppEx1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zahar/ClionProjects/cppEx1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 cppEx1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cppEx1/fast">
+				<Option output="/home/zahar/ClionProjects/cppEx1/cmake-build-debug/cppEx1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zahar/ClionProjects/cppEx1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 cppEx1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/zahar/ClionProjects/cppEx1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Character.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Character.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Enemy/Elite.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Enemy/Elite.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Enemy/Enemy.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Enemy/Enemy.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Enemy/EnemyCharacter.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Enemy/EnemyCharacter.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Hero/Archer.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Hero/Archer.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Hero/Hero.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Hero/Hero.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Hero/Warrior.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Hero/Warrior.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Hero/Wizard.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Characters/Hero/Wizard.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Game/Console.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Game/Console.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Game/Game.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Game/Game.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Game/Point2d.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Game/Point2d.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Game/main.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Game/unitTest.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Armor/Armor.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Armor/Armor.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Armor/BodyArmor.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Armor/BodyArmor.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Armor/ShieldArmor.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Armor/ShieldArmor.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Item.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Item.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Potion/Potion.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Potion/Potion.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Potion/health.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Potion/health.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Potion/mana.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Potion/mana.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/ArcherWeapon.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/ArcherWeapon.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Bow.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Bow.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/CrossBow.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/CrossBow.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Hammer.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Hammer.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Staff.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Staff.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Sword.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Sword.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Wand.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Wand.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/WarriorWeapon.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/WarriorWeapon.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Weapon.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/Weapon.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/WizardWeapon.cpp">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/Items/Weapon/WizardWeapon.h">
+			<Option target="cppEx1"/>
+		</Unit>
+		<Unit filename="/home/zahar/ClionProjects/cppEx1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
