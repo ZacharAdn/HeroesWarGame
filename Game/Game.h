@@ -61,6 +61,12 @@ private:
 
     Console *console;
 
+
+    /**
+     *
+     * @param ifstream
+     * @return
+     */
     double readDoubleFromFile(ifstream &ifstream);
 
     Point2d* readPoint2DFromFile(ifstream &ifstream);

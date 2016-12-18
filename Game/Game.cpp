@@ -45,6 +45,7 @@ void Game::read() {
         getline(file, value, ',');
         std::transform(value.begin(), value.end(), value.begin(), ::tolower);
 
+        //find and fill the  data structure's the Matrix of the game, every Item and Charachter
         if (value.find("matrix") != string::npos) {
             getline(file, value, ',');
             MatRowSize = atoi(value.c_str());
@@ -55,7 +56,6 @@ void Game::read() {
             for (int l = 0; l < MatRowSize; l++) {
                 Matrix[l] = new char[MatColSize];
             }
-
 
         } else if (value.find("warrior") != string::npos) {
             string name = "Warrior " + to_string(heroCounter++);
@@ -134,6 +134,7 @@ void Game::read() {
     }
     file.close();
 
+    //send to console to init and print
     console = new Console(MatRowSize, MatColSize);
     console->fillData(Characters, Items,Matrix);
     cout << "start mat:";
@@ -142,17 +143,17 @@ void Game::read() {
 }
 
 void Game::play() {
-    Hero *hero;
+    Hero *hero= nullptr;
     Point2d *source,*nextPoint;
     size_t i;
 
+    //calculate the direction and the distance to the destination for every hero
     for (size_t i = 0; i < heroes->size(); ++i) {
         calcHeroTrack(heroes->at(i));
     }
 
     while(!heroes->empty()) {
-//        for (size_t i = 0; i < heroes->size(); ++i) {
-        while(i<heroes->size()){
+        while(i < heroes->size()){
             hero = heroes->at(i);
 
             if (!hero->isAtWar()) {
