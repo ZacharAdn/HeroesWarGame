@@ -5,15 +5,12 @@
 #ifndef CPPEX1_POINT2D_H
 #define CPPEX1_POINT2D_H
 
-#include <string>
-
 using namespace std;
+
+#include <string>
 
 
 class Point2d {
-private:
-    int x,y;
-
 public:
 
     Point2d();
@@ -30,9 +27,10 @@ public:
 
     void setY(int y);
 
-//    Point2d & operator=(const Point2d *point);
-
     string toString();
+
+private:
+    int x,y;
 };
 
 

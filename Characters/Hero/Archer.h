@@ -8,12 +8,19 @@
 #include "Hero.h"
 
 class Archer : public Hero{
-private:
-    const double radius = 5;
 
 public:
     Archer();
 
+    /**
+     *
+     * @param hp
+     * @param xp
+     * @param startLocation
+     * @param endLocation
+     * @param name
+     * @param gender
+     */
     Archer(double hp, double xp, Point2d &startLocation, Point2d &endLocation, string &name, int gender);
 
     virtual ~Archer();
@@ -26,7 +33,7 @@ public:
 
 private:
     char charToPrint;
-
+    const double radius = 5;
 
 };
 

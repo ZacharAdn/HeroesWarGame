@@ -14,6 +14,11 @@ public:
 
     Potion();
 
+    /**
+     *
+     * @param location
+     * @param amount
+     */
     Potion(Point2d &location, double amount);
 
     ~Potion();

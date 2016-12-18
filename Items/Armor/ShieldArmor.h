@@ -13,6 +13,11 @@ public:
 
     ShieldArmor();
 
+    /**
+     *
+     * @param location
+     * @param protaction
+     */
     ShieldArmor(Point2d &location, double protaction);
 
     virtual ~ShieldArmor();

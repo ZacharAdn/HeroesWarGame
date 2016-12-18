@@ -9,20 +9,26 @@
 #include "WarriorWeapon.h"
 
 class Sword : public WarriorWeapon {
-private:
-    const double extra = 1.2;
-    const string type = "OneHandedWeapon";
 public:
     Sword();
 
+    /**
+     *
+     * @param location
+     * @param weaponPower
+     */
     Sword(Point2d &location, double weaponPower);
 
     virtual ~Sword();
 
     const string &getType() const;
 
-
     virtual string toString();
+
+
+private:
+    const double extra = 1.2;
+    const string type = "OneHandedWeapon";
 };
 
 

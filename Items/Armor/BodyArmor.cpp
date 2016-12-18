@@ -13,10 +13,6 @@ BodyArmor::~BodyArmor() {
 
 }
 
-string BodyArmor::toString() {
-    return "BodyArmor " +Armor::toString();
-}
-
 void BodyArmor::acceptToUse(Hero *hero) {
     hero->use(this);
 }
@@ -25,6 +21,6 @@ const string &BodyArmor::getName() const {
     return BodyArmor::name;
 }
 
-//string BodyArmor::itemType(Operation *visitor) {
-//    return visitor->visit(this);
-//}
+string BodyArmor::toString() {
+    return "BodyArmor " +Armor::toString();
+}

@@ -27,14 +27,14 @@ void Potion::setAmount(double amount) {
     Potion::amount = amount;
 }
 
-string Potion::toString() {
-    return "(Potion) - "+ getLocation()->toString()+ ", amount: " + to_string(Potion::amount);
-}
-
 char Potion::getcharToPrint() {
     return Potion::charToPrint;
 }
 
 void Potion::acceptToUse(Hero *hero) {
     hero->use(this);
+}
+
+string Potion::toString() {
+    return "(Potion) - "+ getLocation()->toString()+ ", amount: " + to_string(Potion::amount);
 }

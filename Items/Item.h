@@ -17,21 +17,30 @@ class Item {
 public:
     Item();
 
+    /**
+     *
+     * @param location
+     */
     Item(Point2d &location);
 
     virtual ~Item();
+
+    /**
+     * Visitor design pattern
+     *
+     * @param hero
+     */
+    virtual void acceptToUse(Hero *hero) = 0;
+
+    virtual char getcharToPrint() = 0;
+
+    virtual const string &getName() const = 0;
 
     Point2d *getLocation() const;
 
     void setLocation(Point2d *location);
 
     virtual string toString();
-
-    virtual char getcharToPrint() = 0;
-
-    virtual void acceptToUse(Hero *hero) = 0;
-
-    virtual const string &getName() const = 0;
 
 private:
     Point2d *location;

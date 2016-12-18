@@ -12,6 +12,11 @@ class mana : public Potion{
 public:
     mana();
 
+    /**
+     *
+     * @param location
+     * @param amount
+     */
     mana(Point2d &location, double amount);
 
     virtual ~mana();

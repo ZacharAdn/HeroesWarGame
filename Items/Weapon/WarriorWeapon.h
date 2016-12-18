@@ -15,6 +15,11 @@ class WarriorWeapon : public Weapon{
 public:
     WarriorWeapon();
 
+    /**
+     * absrtact class for warrior weapons
+     * @param location
+     * @param weaponPower
+     */
     WarriorWeapon(Point2d &location, double weaponPower);
 
     virtual ~WarriorWeapon();

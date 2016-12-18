@@ -10,12 +10,14 @@
 class Hero;
 
 class CrossBow : public ArcherWeapon {
-private:
-    const double extra = 1.2;
-    const string type = "OneHandedWeapon";
 public:
     CrossBow();
 
+    /**
+     *
+     * @param location
+     * @param weaponPower
+     */
     CrossBow(Point2d &location, double weaponPower);
 
     virtual ~CrossBow();
@@ -23,6 +25,10 @@ public:
     const string &getType() const;
 
     virtual string toString();
+
+private:
+    const double extra = 1.2;
+    const string type = "OneHandedWeapon";
 };
 
 

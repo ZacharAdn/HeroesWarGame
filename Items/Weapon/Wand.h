@@ -9,12 +9,14 @@
 #include "WizardWeapon.h"
 
 class Wand : public WizardWeapon{
-private:
-    const double extra = 1.2;
-    const string type = "OneHandedWeapon";
 public:
     Wand();
 
+    /**
+     *
+     * @param location
+     * @param weaponPower
+     */
     Wand(Point2d &location, double weaponPower);
 
     virtual ~Wand();
@@ -22,6 +24,10 @@ public:
     const string &getType() const;
 
     virtual string toString();
+
+private:
+    const double extra = 1.2;
+    const string type = "OneHandedWeapon";
 };
 
 

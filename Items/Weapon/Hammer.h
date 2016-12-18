@@ -9,12 +9,14 @@
 #include "WarriorWeapon.h"
 
 class Hammer : public WarriorWeapon {
-private:
-    const double extra = 1.6;
-    const string type = "TwoHandedWeapon";
 public:
     Hammer();
 
+    /**
+     *
+     * @param location
+     * @param weaponPower
+     */
     Hammer(Point2d &location, double weaponPower);
 
     virtual ~Hammer();
@@ -22,6 +24,10 @@ public:
     const string &getType() const;
 
     virtual string toString();
+
+private:
+    const double extra = 1.6;
+    const string type = "TwoHandedWeapon";
 };
 
 

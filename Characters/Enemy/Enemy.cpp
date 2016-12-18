@@ -3,8 +3,6 @@
 //
 
 #include "Enemy.h"
-//#include "Operation.h"
-
 
 
 Enemy::Enemy() {}
@@ -16,16 +14,12 @@ Enemy::~Enemy() {
 
 }
 
-//string Enemy::accept(Operation *v) {
-//    return v->visit(this);
-//}
+char Enemy::getcharToPrint() {
+    return Enemy::charToPrint;
+}
 
 string Enemy::toString() {
     return "Enemy " + EnemyCharacter::toString();
-}
-
-char Enemy::getcharToPrint() {
-    return Enemy::charToPrint;
 }
 
 

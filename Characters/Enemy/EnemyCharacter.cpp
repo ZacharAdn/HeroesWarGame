@@ -8,21 +8,16 @@
 
 EnemyCharacter::EnemyCharacter() {}
 
-EnemyCharacter::EnemyCharacter(double hp, double xp, Point2d &startLocation, Point2d &endLocation) : Character(hp, xp,
-                                                                                                               startLocation,
-                                                                                                               endLocation) {}
+EnemyCharacter::EnemyCharacter(double hp, double xp, Point2d &startLocation, Point2d &endLocation)
+        : Character(hp, xp,startLocation,endLocation) {}
 
 EnemyCharacter::~EnemyCharacter() {
 
 }
 
-string EnemyCharacter::toString() {
-    return "(EnemyCharacter) name:"+getName()+", "+Character::toString();
-}
-
 void EnemyCharacter::attack(Hero *hero) {
-    cout <<"\n" << toString() << " \nATTACK\n" << hero->toString();
     double attack=getXp();
+    cout <<"\n" << toString() << " \nATTACK\n" << hero->toString();
     if(hero->getBodyArmor() != nullptr){
         attack*= hero->getBodyArmor()->getProtection();
         cout << "\nhero BodyArmor power "<< hero->getBodyArmor()->getProtection();
@@ -51,5 +46,9 @@ const string &EnemyCharacter::getName() const {
 
 void EnemyCharacter::setName(const string &name) {
     EnemyCharacter::name = name;
+}
+
+string EnemyCharacter::toString() {
+    return "(EnemyCharacter) name:"+getName()+", "+Character::toString();
 }
 

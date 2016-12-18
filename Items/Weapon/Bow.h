@@ -9,13 +9,15 @@
 #include "ArcherWeapon.h"
 
 class Bow : public ArcherWeapon{
-private:
-    const double extra = 1.6;
-    const string type = "TwoHandedWeapon";
-
 public:
+
     Bow();
 
+    /**
+     *
+     * @param location
+     * @param weaponPower
+     */
     Bow(Point2d &location, double weaponPower);
 
     virtual ~Bow();
@@ -23,6 +25,10 @@ public:
     const string &getType() const;
 
     virtual string toString();
+
+private:
+    const double extra = 1.6;
+    const string type = "TwoHandedWeapon";
 };
 
 

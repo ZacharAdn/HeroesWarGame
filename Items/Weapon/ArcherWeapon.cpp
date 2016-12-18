@@ -11,11 +11,12 @@ ArcherWeapon::ArcherWeapon(Point2d &location, double weaponPower)
         : Weapon(location ,weaponPower),name("ArcherWeapon") {}
 
 ArcherWeapon::~ArcherWeapon() {}
-string ArcherWeapon::toString() {
-    return "(ArcherWeapon) - "+Weapon::toString();
-}
 
 const string &ArcherWeapon::getName() const {
     return ArcherWeapon::name;
+}
+
+string ArcherWeapon::toString() {
+    return "(ArcherWeapon) - "+Weapon::toString();
 }
 

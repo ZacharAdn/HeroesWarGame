@@ -17,10 +17,10 @@ WizardWeapon::~WizardWeapon() {
 
 }
 
-string WizardWeapon::toString() {
-    return "(WizardWeapon) - "+Weapon::toString();
-}
-
 const string &WizardWeapon::getName() const {
     return WizardWeapon::name;
+}
+
+string WizardWeapon::toString() {
+    return "(WizardWeapon) - "+Weapon::toString();
 }

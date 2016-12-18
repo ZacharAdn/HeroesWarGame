@@ -7,13 +7,16 @@
 
 
 #include "Weapon.h"
-//#include "Hero.h"
-//class Hero;
 
 class WizardWeapon: public Weapon {
 public:
     WizardWeapon();
 
+    /**
+     * abstract class for wizard weapons
+     * @param location
+     * @param weaponPower
+     */
     WizardWeapon(Point2d &location, double weaponPower);
 
     virtual ~WizardWeapon();

@@ -4,14 +4,12 @@
 #include "Console.h"
 #include "Point2d.h"
 #include "../Characters/Character.h"
-#include "../Items/Item.h"
-
 
 Console::Console() {}
 
 
-Console::Console(int rowSize,int colSize)
-        : rowSize(rowSize), colSize(colSize){}
+Console::Console(int matRowSize,int matColSize)
+        : rowSize(matRowSize), colSize(matColSize){}
 
 Console::~Console() {
 
@@ -19,8 +17,6 @@ Console::~Console() {
 
 
 const void Console::fillData(unordered_map<Point2d*,Character*> *Characters, vector<Item*> *Items,char ** Matrix) {
-    Console::Characters =Characters;
-    Console::Items = Items;
     Console::Matrix=Matrix;
 
     Point2d *location;

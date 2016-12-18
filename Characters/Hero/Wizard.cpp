@@ -19,32 +19,10 @@ const double Wizard::getRadius() const {
 }
 
 
-string Wizard::toString() {
-    return "Wizard "+Hero::toString();
-}
-
 char Wizard::getcharToPrint() {
     return Wizard::charToPrint;
 }
 
-
-//Item *Wizard::use(Item &item) {
-//
-//    if(type == "Staff"){
-//        return useTwoHeandedWeapon(&item, vi);
-//    }else if(type == "Wand"){
-//        return useOneHeandedWeapon(&item, vi);
-//    }else if(type == "health"){
-//        return usePotion(&item, vi);
-//    }else if(type == "mana") {
-//        return usePotion(&item, vi);
-//    }else if(type == "BodyArmor"){
-//        return useBodyArmor(&item, vi);
-//    }else if(type == "ShieldArmor"){
-//        return useShieldArmor(&item, vi);
-//    }
-//
-//
-//    return nullptr;
-//}
-//
+string Wizard::toString() {
+    return "Wizard "+Hero::toString();
+}

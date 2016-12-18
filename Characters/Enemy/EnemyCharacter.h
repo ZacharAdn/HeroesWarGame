@@ -14,15 +14,26 @@ class EnemyCharacter : public Character {
 public:
     EnemyCharacter();
 
+    /**
+     * abstract class of enemies
+     * @param hp
+     * @param xp
+     * @param startLocation
+     * @param endLocation
+     */
     EnemyCharacter(double hp, double xp, Point2d &startLocation, Point2d &endLocation);
 
     virtual ~EnemyCharacter();
 
+    /**
+     * attack back the hero
+     * @param hero
+     */
+    void attack(Hero *hero);
+
     bool isDead() const;
 
     void setDead(bool dead);
-
-    void attack(Hero *hero);
 
     const string &getName() const;
 
@@ -31,7 +42,7 @@ public:
     virtual string toString();
 
 private:
-    bool dead=false;
+    bool dead = false;
     string name;
 
 };

@@ -8,25 +8,46 @@
 using namespace std;
 
 #include <string>
-//#include "../Game/Operation.h"
 #include "../Game/Point2d.h"
 #include "../Items/Item.h"
 
 class Character{
 private:
 
-    double hp;//Health Points
-    double xp;//Experience Points
-    Point2d *startLocation;
+    double hp;
+    double xp;
+    Point2d *location;
     Point2d * endLocation;
 
 public:
 
+
     Character();
 
+    /**
+     * Character in the game
+     *
+     * @param hp Health Point
+     * @param xp Experience Point
+     * @param startLocation
+     * @param endLocation
+     */
     Character(double hp, double xp, Point2d &startLocation,Point2d &endLocation);
 
     virtual ~Character();
+
+
+    /**
+     *
+     * @return representing char for each Character
+     */
+    virtual char getcharToPrint() = 0;
+
+    /**
+     * The damage caused by attacks
+     * @param attack
+     */
+    void damage(double attack);
 
     double getHp() const;
 
@@ -45,10 +66,6 @@ public:
     void setEndLocation(Point2d *endLocation);
 
     virtual string toString();
-
-    virtual char getcharToPrint() = 0;
-
-    void damage(double attack);
 
 
 };

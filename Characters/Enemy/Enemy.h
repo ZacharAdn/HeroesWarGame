@@ -16,6 +16,13 @@ class Enemy : public EnemyCharacter{
 public:
     Enemy();
 
+    /**
+     *
+     * @param hp
+     * @param xp
+     * @param startLocation
+     * @param endLocation
+     */
     Enemy(double hp, double xp, Point2d &startLocation, Point2d &endLocation);
 
     virtual ~Enemy();

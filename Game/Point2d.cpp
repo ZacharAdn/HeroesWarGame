@@ -31,9 +31,3 @@ void Point2d::setY(int y) {
 string Point2d::toString() {
     return "["+ to_string(Point2d::x) +","+to_string(Point2d::y)+"]";
 }
-//
-//Point2d &Point2d::operator=(const Point2d *point) {
-//    Point2d::x = point->x;
-//    Point2d::y = point->y;
-//    return *this;
-//}

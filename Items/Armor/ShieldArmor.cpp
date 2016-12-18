@@ -13,14 +13,14 @@ ShieldArmor::~ShieldArmor() {
 
 }
 
-string ShieldArmor::toString() {
-    return "ShieldArmor " +Armor::toString();
-}
-
 void ShieldArmor::acceptToUse(Hero *hero) {
     hero->use(this);
 }
 
 const string &ShieldArmor::getName() const {
     return ShieldArmor::name;
+}
+
+string ShieldArmor::toString() {
+    return "ShieldArmor " +Armor::toString();
 }

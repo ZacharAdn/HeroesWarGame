@@ -32,14 +32,14 @@ void Weapon::setWeaponPower(double weaponPower)
     Weapon::weaponPower=weaponPower;
 }
 
-string Weapon::toString() {
-    return Item::toString();
-}
-
 char Weapon::getcharToPrint() {
     return Weapon::charToPrint;
 }
 
 void Weapon::acceptToUse(Hero *hero) {
     hero->use(this);
+}
+
+string Weapon::toString() {
+    return Item::toString();
 }

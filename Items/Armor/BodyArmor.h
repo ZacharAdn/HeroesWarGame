@@ -14,6 +14,11 @@ class BodyArmor : public Armor{
 public:
     BodyArmor();
 
+    /**
+     *
+     * @param location
+     * @param protaction
+     */
     BodyArmor(Point2d &location, double protaction);
 
     virtual ~BodyArmor();

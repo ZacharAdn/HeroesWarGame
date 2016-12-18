@@ -13,6 +13,11 @@ public:
 
     health();
 
+    /**
+     *
+     * @param location
+     * @param amount
+     */
     health(Point2d &location, double amount);
 
     virtual ~health();

@@ -144,13 +144,15 @@ void Game::read() {
 void Game::play() {
     Hero *hero;
     Point2d *source,*nextPoint;
+    size_t i;
 
     for (size_t i = 0; i < heroes->size(); ++i) {
         calcHeroTrack(heroes->at(i));
     }
 
     while(!heroes->empty()) {
-        for (size_t i = 0; i < heroes->size(); ++i) {
+//        for (size_t i = 0; i < heroes->size(); ++i) {
+        while(i<heroes->size()){
             hero = heroes->at(i);
 
             if (!hero->isAtWar()) {
@@ -170,12 +172,14 @@ void Game::play() {
                     cout << "\n"<< hero->getName() << " get to destination, WIN!";
                     heroes->erase(heroes->begin() + i);
                     outputVec->push_back((Character *&&) hero);//TODO enemys to output vector.
+                    i--;
                 } else {
                     hero->move(nextPoint);
                     cout << "\n"<<hero->toString();
                     updateMove(hero, source);
                 }
             }
+            i++;
         }
     }
 }
@@ -270,25 +274,22 @@ void Game::calcHeroTrack(Hero *hero) {
 
 void Game::scanForItems(Hero *hero) {
     size_t i = 0;
+    hero->takesNewItem(false);
 
     while(i < Items->size()){
         if(isInRange(Items->at(i)->getLocation(), hero)){
-            hero->takesNewItem(false);//?
             Items->at(i)->acceptToUse(hero);//visitor design pattern
-            if(hero->isNewItem()){
+            if(hero->isTakeNewItem()){
                 if(hero->getThrownArmor() != nullptr){//if the hero takes 2 heanded weapon TODO test
                     hero->getThrownArmor()->setLocation(hero->getStartLocation());
                     Items->push_back(hero->getThrownArmor());
                     hero->throwTheArmor(nullptr);
                 }
-//                cout << "\n" << hero->toString();
+                i--;
                 update("Item", Items->at(i)->getName());
-            }else {
-                   i++;
             }
-        }else{
-            i++;
         }
+        i++;
     }
 }
 
@@ -318,6 +319,7 @@ void Game::WAR(Hero *hero) {
         hero->setAtWar(false);
         hero->setEnemyToWar(nullptr);
         enemy->setDead(true);
+        outputVec->push_back((Character *&&) enemy);
         cout << "\nEnemy dead!\n";
         update("Character", "");
     }

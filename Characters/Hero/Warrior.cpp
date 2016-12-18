@@ -21,35 +21,10 @@ const double Warrior::getRadius() const {
     return radius;
 }
 
-
-
-
-
-
-//Item *Warrior::use(Item &item) {
-//    Visitor *vi = getVisitor();
-//    string type= item.itemType(vi);
-//
-//    if(type == "Hammer"){
-//        return useTwoHeandedWeapon(&item, vi);
-//    }else if(type == "Sword"){
-//        return useOneHeandedWeapon(&item, vi);
-//    }else if(type == "health"){
-//        return usePotion(&item, vi);
-//    }else if(type == "BodyArmor"){
-//        return useBodyArmor(&item, vi);
-//    }else if(type == "ShieldArmor"){
-//        return useShieldArmor(&item, vi);
-//    }
-//
-//    return nullptr;
-//
-//}
+char Warrior::getcharToPrint() {
+    return Warrior::charToPrint;
+}
 
 string Warrior::toString() {
     return "Warrior "+Hero::toString();
-}
-
-char Warrior::getcharToPrint() {
-    return Warrior::charToPrint;
 }

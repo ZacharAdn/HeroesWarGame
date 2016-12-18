@@ -9,12 +9,19 @@
 #include "Hero.h"
 
 class Warrior : public Hero{
-private:
-    const double radius = sqrt(2);
 public:
 
     Warrior();
 
+    /**
+     *
+     * @param hp
+     * @param xp
+     * @param startLocation
+     * @param endLocation
+     * @param name
+     * @param gender
+     */
     Warrior(double hp, double xp, Point2d &startLocation, Point2d &endLocation,  string &name, int gender);
 
     virtual ~Warrior();
@@ -27,8 +34,8 @@ public:
 
 private:
     char charToPrint;
+    const double radius = sqrt(2);
 
-//
 };
 
 

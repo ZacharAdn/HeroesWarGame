@@ -14,6 +14,11 @@ class Weapon : public Item{
 public:
     Weapon();
 
+    /**
+     *
+     * @param location
+     * @param weaponPower
+     */
     Weapon(Point2d &location, double weaponPower);
 
     virtual ~Weapon();

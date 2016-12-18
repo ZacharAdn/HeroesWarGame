@@ -6,13 +6,13 @@
 #define CPPEX1_HERO_H
 using namespace std;
 
-#define POSITIVE_SIDE -1
-#define NEGATIVE_SIDE 1
-#define FULL 100
-
 #include <string>
 #include "iostream"
 #include "../Character.h"
+
+#define POSITIVE_SIDE -1
+#define NEGATIVE_SIDE 1
+#define FULL 100
 
 class ShieldArmor;
 class BodyArmor;
@@ -26,15 +26,69 @@ public:
 
     Hero();
 
+    /**
+     *
+     * @param hp
+     * @param xp
+     * @param startLocation
+     * @param endLocation
+     * @param name
+     * @param gender
+     */
     Hero(double hp, double xp, Point2d &startLocation, Point2d &endLocation, const string &name, int gender);
 
     virtual ~Hero();
 
+    /**
+     * apply to hero the use of weapon in hes radius
+     * called from acceptToUse function in Item class
+     * using Visitor design patterm
+     * @param weapon
+     */
+    virtual void use(Weapon *weapon);
+
+    /**
+     * apply to hero the use of potion in hes radius
+     * @param potion
+     */
+    virtual void use(Potion *potion);
+
+    /**
+     * apply to hero the use of body armor in hes radius
+     * @param bodyArmor
+     */
+    virtual void use(BodyArmor *bodyArmor);
+
+    /**
+     * apply to hero the use of shield armor in hes radius
+     * @param shieldArmor
+     */
+    virtual void use(ShieldArmor *shieldArmor);
+
+    /**
+     * moves the hero to hes destination
+     * @param dest
+     */
+    void move(Point2d *dest);
+
+    /**
+     * attack enemy in the radius
+     * @param enemy
+     */
+    void attack(EnemyCharacter *enemy);
+
+
+    /**
+     *
+     * @return the radius scanning for enemys and items on the map
+     */
+    virtual const double getRadius() const = 0;
+
+    void throwTheArmor(ShieldArmor *pArmor);
+
     const string &getName() const;
 
     void setName(const string &name);
-
-    virtual const double getRadius() const = 0;
 
     int getGender() const;
 
@@ -72,31 +126,17 @@ public:
 
     void setWeapon(Weapon *weapon);
 
-    virtual void use(Weapon *weapon);
-
-    virtual void use(Potion *potion);
-
-    virtual void use(BodyArmor *bodyArmor);
-
-    virtual void use(ShieldArmor *shieldArmor);
-
-    void move(Point2d *dest);
-
-    void attack(EnemyCharacter *enemy);
-
-    virtual string toString();
-
     void setEnemyToWar(EnemyCharacter *enemy);
 
     EnemyCharacter *getEnemyToWar() const;
 
-    bool isNewItem() const;
+    bool isTakeNewItem() const;
 
     void takesNewItem(bool b);
 
     ShieldArmor *getThrownArmor() const;
 
-    void throwTheArmor(ShieldArmor *pArmor);
+    virtual string toString();
 
 private:
     string name;
@@ -112,7 +152,10 @@ private:
     Potion *potion;
     EnemyCharacter *enemyToWar;
 
-
+    /**
+     * checks for num of free hands and holding shields by hero
+     * @param pWeapon
+     */
     void checkAndTakeWeapon(Weapon *pWeapon);
 
 };

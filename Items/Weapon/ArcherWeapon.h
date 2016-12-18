@@ -15,6 +15,11 @@ public:
 
     ArcherWeapon();
 
+    /**
+     * absract class for archer weapons
+     * @param location
+     * @param weaponPower
+     */
     ArcherWeapon(Point2d &location, double weaponPower);
 
     virtual ~ArcherWeapon();

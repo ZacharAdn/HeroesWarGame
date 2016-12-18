@@ -16,10 +16,11 @@ WarriorWeapon::WarriorWeapon(Point2d &location, double weaponPower)
 WarriorWeapon::~WarriorWeapon() {
 
 }
-string WarriorWeapon::toString() {
-    return "(WarriorWeapon) - "+Weapon::toString();
-}
 
 const string &WarriorWeapon::getName() const {
     return WarriorWeapon::name;
+}
+
+string WarriorWeapon::toString() {
+    return "(WarriorWeapon) - "+Weapon::toString();
 }

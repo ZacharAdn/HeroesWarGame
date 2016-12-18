@@ -12,6 +12,13 @@ class Elite : public EnemyCharacter{
 public:
     Elite();
 
+    /**
+     *
+     * @param hp
+     * @param xp
+     * @param startLocation
+     * @param endLocation
+     */
     Elite(double hp, double xp, Point2d &startLocation, Point2d &endLocation);
 
     virtual ~Elite();

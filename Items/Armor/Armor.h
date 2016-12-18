@@ -14,6 +14,11 @@ public:
 
     Armor();
 
+    /**
+     *
+     * @param location
+     * @param protection
+     */
     Armor(Point2d &location, double protection);
 
     virtual ~Armor();

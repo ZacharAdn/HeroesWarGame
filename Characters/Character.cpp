@@ -9,10 +9,14 @@
 Character::Character() {}
 
 Character::Character(double hp, double xp, Point2d &startLocation, Point2d &endLocation):
-hp(hp) , xp(xp) , startLocation(&startLocation), endLocation(&endLocation) {}
+hp(hp) , xp(xp) , location(&startLocation), endLocation(&endLocation) {}
 
 Character::~Character() {
 
+}
+
+void Character::damage(double attack) {
+    setHp(getHp()-attack);
 }
 
 double Character::getHp() const {
@@ -30,18 +34,13 @@ double Character::getXp() const {
 void Character::setXp(double xp) {
     Character::xp = xp;
 }
-//
-//void Character::damage(const double attack)
-//{
-//    Character::setHp(Character::getHp()-attack);
-//}
-//
+
 Point2d *Character::getStartLocation() const {
-    return startLocation;
+    return location;
 }
 
 void Character::setStartLocation(Point2d *startLocation) {
-    Character::startLocation = startLocation;
+    Character::location = startLocation;
 }
 
 Point2d *Character::getEndLocation() const {
@@ -54,12 +53,8 @@ void Character::setEndLocation(Point2d *endLocation) {
 
 string Character::toString()
 {
-    return "Start Point:"+Character::startLocation->toString()+",End Point:"+ Character::endLocation->toString()
+    return "Start Point:"+Character::location->toString()+",End Point:"+ Character::endLocation->toString()
            +", HP:"+ to_string(Character::hp) +", XP:"+ to_string(Character::xp);
-}
-
-void Character::damage(double attack) {
-    setHp(getHp()-attack);
 }
 
 

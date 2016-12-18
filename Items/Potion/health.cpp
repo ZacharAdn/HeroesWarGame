@@ -12,10 +12,10 @@ health::~health() {
 
 }
 
-string health::toString() {
-    return  "health " + Potion::toString();
-}
-
 const string &health::getName() const {
     return health::name;
+}
+
+string health::toString() {
+    return  "health " + Potion::toString();
 }
