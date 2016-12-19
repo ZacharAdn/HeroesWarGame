@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cppEx1
+# Target rules for targets named GAME
 
 # Build rule for target.
-cppEx1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cppEx1
-.PHONY : cppEx1
+GAME: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GAME
+.PHONY : GAME
 
 # fast build rule for target.
-cppEx1/fast:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/build
-.PHONY : cppEx1/fast
+GAME/fast:
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/build
+.PHONY : GAME/fast
 
 Characters/Character.o: Characters/Character.cpp.o
 
@@ -129,7 +129,7 @@ Characters/Character.o: Characters/Character.cpp.o
 
 # target to build an object file
 Characters/Character.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Character.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Character.cpp.o
 .PHONY : Characters/Character.cpp.o
 
 Characters/Character.i: Characters/Character.cpp.i
@@ -138,7 +138,7 @@ Characters/Character.i: Characters/Character.cpp.i
 
 # target to preprocess a source file
 Characters/Character.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Character.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Character.cpp.i
 .PHONY : Characters/Character.cpp.i
 
 Characters/Character.s: Characters/Character.cpp.s
@@ -147,7 +147,7 @@ Characters/Character.s: Characters/Character.cpp.s
 
 # target to generate assembly for a file
 Characters/Character.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Character.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Character.cpp.s
 .PHONY : Characters/Character.cpp.s
 
 Characters/Enemy/Elite.o: Characters/Enemy/Elite.cpp.o
@@ -156,7 +156,7 @@ Characters/Enemy/Elite.o: Characters/Enemy/Elite.cpp.o
 
 # target to build an object file
 Characters/Enemy/Elite.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Enemy/Elite.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Enemy/Elite.cpp.o
 .PHONY : Characters/Enemy/Elite.cpp.o
 
 Characters/Enemy/Elite.i: Characters/Enemy/Elite.cpp.i
@@ -165,7 +165,7 @@ Characters/Enemy/Elite.i: Characters/Enemy/Elite.cpp.i
 
 # target to preprocess a source file
 Characters/Enemy/Elite.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Enemy/Elite.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Enemy/Elite.cpp.i
 .PHONY : Characters/Enemy/Elite.cpp.i
 
 Characters/Enemy/Elite.s: Characters/Enemy/Elite.cpp.s
@@ -174,7 +174,7 @@ Characters/Enemy/Elite.s: Characters/Enemy/Elite.cpp.s
 
 # target to generate assembly for a file
 Characters/Enemy/Elite.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Enemy/Elite.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Enemy/Elite.cpp.s
 .PHONY : Characters/Enemy/Elite.cpp.s
 
 Characters/Enemy/Enemy.o: Characters/Enemy/Enemy.cpp.o
@@ -183,7 +183,7 @@ Characters/Enemy/Enemy.o: Characters/Enemy/Enemy.cpp.o
 
 # target to build an object file
 Characters/Enemy/Enemy.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Enemy/Enemy.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Enemy/Enemy.cpp.o
 .PHONY : Characters/Enemy/Enemy.cpp.o
 
 Characters/Enemy/Enemy.i: Characters/Enemy/Enemy.cpp.i
@@ -192,7 +192,7 @@ Characters/Enemy/Enemy.i: Characters/Enemy/Enemy.cpp.i
 
 # target to preprocess a source file
 Characters/Enemy/Enemy.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Enemy/Enemy.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Enemy/Enemy.cpp.i
 .PHONY : Characters/Enemy/Enemy.cpp.i
 
 Characters/Enemy/Enemy.s: Characters/Enemy/Enemy.cpp.s
@@ -201,7 +201,7 @@ Characters/Enemy/Enemy.s: Characters/Enemy/Enemy.cpp.s
 
 # target to generate assembly for a file
 Characters/Enemy/Enemy.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Enemy/Enemy.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Enemy/Enemy.cpp.s
 .PHONY : Characters/Enemy/Enemy.cpp.s
 
 Characters/Enemy/EnemyCharacter.o: Characters/Enemy/EnemyCharacter.cpp.o
@@ -210,7 +210,7 @@ Characters/Enemy/EnemyCharacter.o: Characters/Enemy/EnemyCharacter.cpp.o
 
 # target to build an object file
 Characters/Enemy/EnemyCharacter.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Enemy/EnemyCharacter.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Enemy/EnemyCharacter.cpp.o
 .PHONY : Characters/Enemy/EnemyCharacter.cpp.o
 
 Characters/Enemy/EnemyCharacter.i: Characters/Enemy/EnemyCharacter.cpp.i
@@ -219,7 +219,7 @@ Characters/Enemy/EnemyCharacter.i: Characters/Enemy/EnemyCharacter.cpp.i
 
 # target to preprocess a source file
 Characters/Enemy/EnemyCharacter.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Enemy/EnemyCharacter.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Enemy/EnemyCharacter.cpp.i
 .PHONY : Characters/Enemy/EnemyCharacter.cpp.i
 
 Characters/Enemy/EnemyCharacter.s: Characters/Enemy/EnemyCharacter.cpp.s
@@ -228,7 +228,7 @@ Characters/Enemy/EnemyCharacter.s: Characters/Enemy/EnemyCharacter.cpp.s
 
 # target to generate assembly for a file
 Characters/Enemy/EnemyCharacter.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Enemy/EnemyCharacter.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Enemy/EnemyCharacter.cpp.s
 .PHONY : Characters/Enemy/EnemyCharacter.cpp.s
 
 Characters/Hero/Archer.o: Characters/Hero/Archer.cpp.o
@@ -237,7 +237,7 @@ Characters/Hero/Archer.o: Characters/Hero/Archer.cpp.o
 
 # target to build an object file
 Characters/Hero/Archer.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Archer.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Archer.cpp.o
 .PHONY : Characters/Hero/Archer.cpp.o
 
 Characters/Hero/Archer.i: Characters/Hero/Archer.cpp.i
@@ -246,7 +246,7 @@ Characters/Hero/Archer.i: Characters/Hero/Archer.cpp.i
 
 # target to preprocess a source file
 Characters/Hero/Archer.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Archer.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Archer.cpp.i
 .PHONY : Characters/Hero/Archer.cpp.i
 
 Characters/Hero/Archer.s: Characters/Hero/Archer.cpp.s
@@ -255,7 +255,7 @@ Characters/Hero/Archer.s: Characters/Hero/Archer.cpp.s
 
 # target to generate assembly for a file
 Characters/Hero/Archer.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Archer.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Archer.cpp.s
 .PHONY : Characters/Hero/Archer.cpp.s
 
 Characters/Hero/Hero.o: Characters/Hero/Hero.cpp.o
@@ -264,7 +264,7 @@ Characters/Hero/Hero.o: Characters/Hero/Hero.cpp.o
 
 # target to build an object file
 Characters/Hero/Hero.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Hero.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Hero.cpp.o
 .PHONY : Characters/Hero/Hero.cpp.o
 
 Characters/Hero/Hero.i: Characters/Hero/Hero.cpp.i
@@ -273,7 +273,7 @@ Characters/Hero/Hero.i: Characters/Hero/Hero.cpp.i
 
 # target to preprocess a source file
 Characters/Hero/Hero.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Hero.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Hero.cpp.i
 .PHONY : Characters/Hero/Hero.cpp.i
 
 Characters/Hero/Hero.s: Characters/Hero/Hero.cpp.s
@@ -282,7 +282,7 @@ Characters/Hero/Hero.s: Characters/Hero/Hero.cpp.s
 
 # target to generate assembly for a file
 Characters/Hero/Hero.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Hero.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Hero.cpp.s
 .PHONY : Characters/Hero/Hero.cpp.s
 
 Characters/Hero/Warrior.o: Characters/Hero/Warrior.cpp.o
@@ -291,7 +291,7 @@ Characters/Hero/Warrior.o: Characters/Hero/Warrior.cpp.o
 
 # target to build an object file
 Characters/Hero/Warrior.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Warrior.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Warrior.cpp.o
 .PHONY : Characters/Hero/Warrior.cpp.o
 
 Characters/Hero/Warrior.i: Characters/Hero/Warrior.cpp.i
@@ -300,7 +300,7 @@ Characters/Hero/Warrior.i: Characters/Hero/Warrior.cpp.i
 
 # target to preprocess a source file
 Characters/Hero/Warrior.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Warrior.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Warrior.cpp.i
 .PHONY : Characters/Hero/Warrior.cpp.i
 
 Characters/Hero/Warrior.s: Characters/Hero/Warrior.cpp.s
@@ -309,7 +309,7 @@ Characters/Hero/Warrior.s: Characters/Hero/Warrior.cpp.s
 
 # target to generate assembly for a file
 Characters/Hero/Warrior.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Warrior.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Warrior.cpp.s
 .PHONY : Characters/Hero/Warrior.cpp.s
 
 Characters/Hero/Wizard.o: Characters/Hero/Wizard.cpp.o
@@ -318,7 +318,7 @@ Characters/Hero/Wizard.o: Characters/Hero/Wizard.cpp.o
 
 # target to build an object file
 Characters/Hero/Wizard.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Wizard.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Wizard.cpp.o
 .PHONY : Characters/Hero/Wizard.cpp.o
 
 Characters/Hero/Wizard.i: Characters/Hero/Wizard.cpp.i
@@ -327,7 +327,7 @@ Characters/Hero/Wizard.i: Characters/Hero/Wizard.cpp.i
 
 # target to preprocess a source file
 Characters/Hero/Wizard.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Wizard.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Wizard.cpp.i
 .PHONY : Characters/Hero/Wizard.cpp.i
 
 Characters/Hero/Wizard.s: Characters/Hero/Wizard.cpp.s
@@ -336,7 +336,7 @@ Characters/Hero/Wizard.s: Characters/Hero/Wizard.cpp.s
 
 # target to generate assembly for a file
 Characters/Hero/Wizard.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Characters/Hero/Wizard.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Characters/Hero/Wizard.cpp.s
 .PHONY : Characters/Hero/Wizard.cpp.s
 
 Game/Console.o: Game/Console.cpp.o
@@ -345,7 +345,7 @@ Game/Console.o: Game/Console.cpp.o
 
 # target to build an object file
 Game/Console.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/Console.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/Console.cpp.o
 .PHONY : Game/Console.cpp.o
 
 Game/Console.i: Game/Console.cpp.i
@@ -354,7 +354,7 @@ Game/Console.i: Game/Console.cpp.i
 
 # target to preprocess a source file
 Game/Console.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/Console.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/Console.cpp.i
 .PHONY : Game/Console.cpp.i
 
 Game/Console.s: Game/Console.cpp.s
@@ -363,7 +363,7 @@ Game/Console.s: Game/Console.cpp.s
 
 # target to generate assembly for a file
 Game/Console.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/Console.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/Console.cpp.s
 .PHONY : Game/Console.cpp.s
 
 Game/Game.o: Game/Game.cpp.o
@@ -372,7 +372,7 @@ Game/Game.o: Game/Game.cpp.o
 
 # target to build an object file
 Game/Game.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/Game.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/Game.cpp.o
 .PHONY : Game/Game.cpp.o
 
 Game/Game.i: Game/Game.cpp.i
@@ -381,7 +381,7 @@ Game/Game.i: Game/Game.cpp.i
 
 # target to preprocess a source file
 Game/Game.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/Game.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/Game.cpp.i
 .PHONY : Game/Game.cpp.i
 
 Game/Game.s: Game/Game.cpp.s
@@ -390,7 +390,7 @@ Game/Game.s: Game/Game.cpp.s
 
 # target to generate assembly for a file
 Game/Game.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/Game.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/Game.cpp.s
 .PHONY : Game/Game.cpp.s
 
 Game/Point2d.o: Game/Point2d.cpp.o
@@ -399,7 +399,7 @@ Game/Point2d.o: Game/Point2d.cpp.o
 
 # target to build an object file
 Game/Point2d.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/Point2d.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/Point2d.cpp.o
 .PHONY : Game/Point2d.cpp.o
 
 Game/Point2d.i: Game/Point2d.cpp.i
@@ -408,7 +408,7 @@ Game/Point2d.i: Game/Point2d.cpp.i
 
 # target to preprocess a source file
 Game/Point2d.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/Point2d.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/Point2d.cpp.i
 .PHONY : Game/Point2d.cpp.i
 
 Game/Point2d.s: Game/Point2d.cpp.s
@@ -417,7 +417,7 @@ Game/Point2d.s: Game/Point2d.cpp.s
 
 # target to generate assembly for a file
 Game/Point2d.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/Point2d.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/Point2d.cpp.s
 .PHONY : Game/Point2d.cpp.s
 
 Game/main.o: Game/main.cpp.o
@@ -426,7 +426,7 @@ Game/main.o: Game/main.cpp.o
 
 # target to build an object file
 Game/main.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/main.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/main.cpp.o
 .PHONY : Game/main.cpp.o
 
 Game/main.i: Game/main.cpp.i
@@ -435,7 +435,7 @@ Game/main.i: Game/main.cpp.i
 
 # target to preprocess a source file
 Game/main.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/main.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/main.cpp.i
 .PHONY : Game/main.cpp.i
 
 Game/main.s: Game/main.cpp.s
@@ -444,7 +444,7 @@ Game/main.s: Game/main.cpp.s
 
 # target to generate assembly for a file
 Game/main.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/main.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/main.cpp.s
 .PHONY : Game/main.cpp.s
 
 Game/unitTest.o: Game/unitTest.cpp.o
@@ -453,7 +453,7 @@ Game/unitTest.o: Game/unitTest.cpp.o
 
 # target to build an object file
 Game/unitTest.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/unitTest.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/unitTest.cpp.o
 .PHONY : Game/unitTest.cpp.o
 
 Game/unitTest.i: Game/unitTest.cpp.i
@@ -462,7 +462,7 @@ Game/unitTest.i: Game/unitTest.cpp.i
 
 # target to preprocess a source file
 Game/unitTest.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/unitTest.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/unitTest.cpp.i
 .PHONY : Game/unitTest.cpp.i
 
 Game/unitTest.s: Game/unitTest.cpp.s
@@ -471,7 +471,7 @@ Game/unitTest.s: Game/unitTest.cpp.s
 
 # target to generate assembly for a file
 Game/unitTest.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Game/unitTest.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Game/unitTest.cpp.s
 .PHONY : Game/unitTest.cpp.s
 
 Items/Armor/Armor.o: Items/Armor/Armor.cpp.o
@@ -480,7 +480,7 @@ Items/Armor/Armor.o: Items/Armor/Armor.cpp.o
 
 # target to build an object file
 Items/Armor/Armor.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Armor/Armor.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Armor/Armor.cpp.o
 .PHONY : Items/Armor/Armor.cpp.o
 
 Items/Armor/Armor.i: Items/Armor/Armor.cpp.i
@@ -489,7 +489,7 @@ Items/Armor/Armor.i: Items/Armor/Armor.cpp.i
 
 # target to preprocess a source file
 Items/Armor/Armor.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Armor/Armor.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Armor/Armor.cpp.i
 .PHONY : Items/Armor/Armor.cpp.i
 
 Items/Armor/Armor.s: Items/Armor/Armor.cpp.s
@@ -498,7 +498,7 @@ Items/Armor/Armor.s: Items/Armor/Armor.cpp.s
 
 # target to generate assembly for a file
 Items/Armor/Armor.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Armor/Armor.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Armor/Armor.cpp.s
 .PHONY : Items/Armor/Armor.cpp.s
 
 Items/Armor/BodyArmor.o: Items/Armor/BodyArmor.cpp.o
@@ -507,7 +507,7 @@ Items/Armor/BodyArmor.o: Items/Armor/BodyArmor.cpp.o
 
 # target to build an object file
 Items/Armor/BodyArmor.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Armor/BodyArmor.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Armor/BodyArmor.cpp.o
 .PHONY : Items/Armor/BodyArmor.cpp.o
 
 Items/Armor/BodyArmor.i: Items/Armor/BodyArmor.cpp.i
@@ -516,7 +516,7 @@ Items/Armor/BodyArmor.i: Items/Armor/BodyArmor.cpp.i
 
 # target to preprocess a source file
 Items/Armor/BodyArmor.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Armor/BodyArmor.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Armor/BodyArmor.cpp.i
 .PHONY : Items/Armor/BodyArmor.cpp.i
 
 Items/Armor/BodyArmor.s: Items/Armor/BodyArmor.cpp.s
@@ -525,7 +525,7 @@ Items/Armor/BodyArmor.s: Items/Armor/BodyArmor.cpp.s
 
 # target to generate assembly for a file
 Items/Armor/BodyArmor.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Armor/BodyArmor.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Armor/BodyArmor.cpp.s
 .PHONY : Items/Armor/BodyArmor.cpp.s
 
 Items/Armor/ShieldArmor.o: Items/Armor/ShieldArmor.cpp.o
@@ -534,7 +534,7 @@ Items/Armor/ShieldArmor.o: Items/Armor/ShieldArmor.cpp.o
 
 # target to build an object file
 Items/Armor/ShieldArmor.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Armor/ShieldArmor.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Armor/ShieldArmor.cpp.o
 .PHONY : Items/Armor/ShieldArmor.cpp.o
 
 Items/Armor/ShieldArmor.i: Items/Armor/ShieldArmor.cpp.i
@@ -543,7 +543,7 @@ Items/Armor/ShieldArmor.i: Items/Armor/ShieldArmor.cpp.i
 
 # target to preprocess a source file
 Items/Armor/ShieldArmor.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Armor/ShieldArmor.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Armor/ShieldArmor.cpp.i
 .PHONY : Items/Armor/ShieldArmor.cpp.i
 
 Items/Armor/ShieldArmor.s: Items/Armor/ShieldArmor.cpp.s
@@ -552,7 +552,7 @@ Items/Armor/ShieldArmor.s: Items/Armor/ShieldArmor.cpp.s
 
 # target to generate assembly for a file
 Items/Armor/ShieldArmor.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Armor/ShieldArmor.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Armor/ShieldArmor.cpp.s
 .PHONY : Items/Armor/ShieldArmor.cpp.s
 
 Items/Item.o: Items/Item.cpp.o
@@ -561,7 +561,7 @@ Items/Item.o: Items/Item.cpp.o
 
 # target to build an object file
 Items/Item.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Item.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Item.cpp.o
 .PHONY : Items/Item.cpp.o
 
 Items/Item.i: Items/Item.cpp.i
@@ -570,7 +570,7 @@ Items/Item.i: Items/Item.cpp.i
 
 # target to preprocess a source file
 Items/Item.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Item.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Item.cpp.i
 .PHONY : Items/Item.cpp.i
 
 Items/Item.s: Items/Item.cpp.s
@@ -579,7 +579,7 @@ Items/Item.s: Items/Item.cpp.s
 
 # target to generate assembly for a file
 Items/Item.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Item.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Item.cpp.s
 .PHONY : Items/Item.cpp.s
 
 Items/Potion/Potion.o: Items/Potion/Potion.cpp.o
@@ -588,7 +588,7 @@ Items/Potion/Potion.o: Items/Potion/Potion.cpp.o
 
 # target to build an object file
 Items/Potion/Potion.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Potion/Potion.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Potion/Potion.cpp.o
 .PHONY : Items/Potion/Potion.cpp.o
 
 Items/Potion/Potion.i: Items/Potion/Potion.cpp.i
@@ -597,7 +597,7 @@ Items/Potion/Potion.i: Items/Potion/Potion.cpp.i
 
 # target to preprocess a source file
 Items/Potion/Potion.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Potion/Potion.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Potion/Potion.cpp.i
 .PHONY : Items/Potion/Potion.cpp.i
 
 Items/Potion/Potion.s: Items/Potion/Potion.cpp.s
@@ -606,7 +606,7 @@ Items/Potion/Potion.s: Items/Potion/Potion.cpp.s
 
 # target to generate assembly for a file
 Items/Potion/Potion.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Potion/Potion.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Potion/Potion.cpp.s
 .PHONY : Items/Potion/Potion.cpp.s
 
 Items/Potion/health.o: Items/Potion/health.cpp.o
@@ -615,7 +615,7 @@ Items/Potion/health.o: Items/Potion/health.cpp.o
 
 # target to build an object file
 Items/Potion/health.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Potion/health.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Potion/health.cpp.o
 .PHONY : Items/Potion/health.cpp.o
 
 Items/Potion/health.i: Items/Potion/health.cpp.i
@@ -624,7 +624,7 @@ Items/Potion/health.i: Items/Potion/health.cpp.i
 
 # target to preprocess a source file
 Items/Potion/health.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Potion/health.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Potion/health.cpp.i
 .PHONY : Items/Potion/health.cpp.i
 
 Items/Potion/health.s: Items/Potion/health.cpp.s
@@ -633,7 +633,7 @@ Items/Potion/health.s: Items/Potion/health.cpp.s
 
 # target to generate assembly for a file
 Items/Potion/health.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Potion/health.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Potion/health.cpp.s
 .PHONY : Items/Potion/health.cpp.s
 
 Items/Potion/mana.o: Items/Potion/mana.cpp.o
@@ -642,7 +642,7 @@ Items/Potion/mana.o: Items/Potion/mana.cpp.o
 
 # target to build an object file
 Items/Potion/mana.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Potion/mana.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Potion/mana.cpp.o
 .PHONY : Items/Potion/mana.cpp.o
 
 Items/Potion/mana.i: Items/Potion/mana.cpp.i
@@ -651,7 +651,7 @@ Items/Potion/mana.i: Items/Potion/mana.cpp.i
 
 # target to preprocess a source file
 Items/Potion/mana.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Potion/mana.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Potion/mana.cpp.i
 .PHONY : Items/Potion/mana.cpp.i
 
 Items/Potion/mana.s: Items/Potion/mana.cpp.s
@@ -660,7 +660,7 @@ Items/Potion/mana.s: Items/Potion/mana.cpp.s
 
 # target to generate assembly for a file
 Items/Potion/mana.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Potion/mana.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Potion/mana.cpp.s
 .PHONY : Items/Potion/mana.cpp.s
 
 Items/Weapon/ArcherWeapon.o: Items/Weapon/ArcherWeapon.cpp.o
@@ -669,7 +669,7 @@ Items/Weapon/ArcherWeapon.o: Items/Weapon/ArcherWeapon.cpp.o
 
 # target to build an object file
 Items/Weapon/ArcherWeapon.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/ArcherWeapon.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/ArcherWeapon.cpp.o
 .PHONY : Items/Weapon/ArcherWeapon.cpp.o
 
 Items/Weapon/ArcherWeapon.i: Items/Weapon/ArcherWeapon.cpp.i
@@ -678,7 +678,7 @@ Items/Weapon/ArcherWeapon.i: Items/Weapon/ArcherWeapon.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/ArcherWeapon.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/ArcherWeapon.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/ArcherWeapon.cpp.i
 .PHONY : Items/Weapon/ArcherWeapon.cpp.i
 
 Items/Weapon/ArcherWeapon.s: Items/Weapon/ArcherWeapon.cpp.s
@@ -687,7 +687,7 @@ Items/Weapon/ArcherWeapon.s: Items/Weapon/ArcherWeapon.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/ArcherWeapon.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/ArcherWeapon.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/ArcherWeapon.cpp.s
 .PHONY : Items/Weapon/ArcherWeapon.cpp.s
 
 Items/Weapon/Bow.o: Items/Weapon/Bow.cpp.o
@@ -696,7 +696,7 @@ Items/Weapon/Bow.o: Items/Weapon/Bow.cpp.o
 
 # target to build an object file
 Items/Weapon/Bow.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Bow.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Bow.cpp.o
 .PHONY : Items/Weapon/Bow.cpp.o
 
 Items/Weapon/Bow.i: Items/Weapon/Bow.cpp.i
@@ -705,7 +705,7 @@ Items/Weapon/Bow.i: Items/Weapon/Bow.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/Bow.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Bow.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Bow.cpp.i
 .PHONY : Items/Weapon/Bow.cpp.i
 
 Items/Weapon/Bow.s: Items/Weapon/Bow.cpp.s
@@ -714,7 +714,7 @@ Items/Weapon/Bow.s: Items/Weapon/Bow.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/Bow.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Bow.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Bow.cpp.s
 .PHONY : Items/Weapon/Bow.cpp.s
 
 Items/Weapon/CrossBow.o: Items/Weapon/CrossBow.cpp.o
@@ -723,7 +723,7 @@ Items/Weapon/CrossBow.o: Items/Weapon/CrossBow.cpp.o
 
 # target to build an object file
 Items/Weapon/CrossBow.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/CrossBow.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/CrossBow.cpp.o
 .PHONY : Items/Weapon/CrossBow.cpp.o
 
 Items/Weapon/CrossBow.i: Items/Weapon/CrossBow.cpp.i
@@ -732,7 +732,7 @@ Items/Weapon/CrossBow.i: Items/Weapon/CrossBow.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/CrossBow.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/CrossBow.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/CrossBow.cpp.i
 .PHONY : Items/Weapon/CrossBow.cpp.i
 
 Items/Weapon/CrossBow.s: Items/Weapon/CrossBow.cpp.s
@@ -741,7 +741,7 @@ Items/Weapon/CrossBow.s: Items/Weapon/CrossBow.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/CrossBow.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/CrossBow.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/CrossBow.cpp.s
 .PHONY : Items/Weapon/CrossBow.cpp.s
 
 Items/Weapon/Hammer.o: Items/Weapon/Hammer.cpp.o
@@ -750,7 +750,7 @@ Items/Weapon/Hammer.o: Items/Weapon/Hammer.cpp.o
 
 # target to build an object file
 Items/Weapon/Hammer.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Hammer.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Hammer.cpp.o
 .PHONY : Items/Weapon/Hammer.cpp.o
 
 Items/Weapon/Hammer.i: Items/Weapon/Hammer.cpp.i
@@ -759,7 +759,7 @@ Items/Weapon/Hammer.i: Items/Weapon/Hammer.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/Hammer.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Hammer.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Hammer.cpp.i
 .PHONY : Items/Weapon/Hammer.cpp.i
 
 Items/Weapon/Hammer.s: Items/Weapon/Hammer.cpp.s
@@ -768,7 +768,7 @@ Items/Weapon/Hammer.s: Items/Weapon/Hammer.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/Hammer.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Hammer.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Hammer.cpp.s
 .PHONY : Items/Weapon/Hammer.cpp.s
 
 Items/Weapon/Staff.o: Items/Weapon/Staff.cpp.o
@@ -777,7 +777,7 @@ Items/Weapon/Staff.o: Items/Weapon/Staff.cpp.o
 
 # target to build an object file
 Items/Weapon/Staff.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Staff.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Staff.cpp.o
 .PHONY : Items/Weapon/Staff.cpp.o
 
 Items/Weapon/Staff.i: Items/Weapon/Staff.cpp.i
@@ -786,7 +786,7 @@ Items/Weapon/Staff.i: Items/Weapon/Staff.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/Staff.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Staff.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Staff.cpp.i
 .PHONY : Items/Weapon/Staff.cpp.i
 
 Items/Weapon/Staff.s: Items/Weapon/Staff.cpp.s
@@ -795,7 +795,7 @@ Items/Weapon/Staff.s: Items/Weapon/Staff.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/Staff.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Staff.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Staff.cpp.s
 .PHONY : Items/Weapon/Staff.cpp.s
 
 Items/Weapon/Sword.o: Items/Weapon/Sword.cpp.o
@@ -804,7 +804,7 @@ Items/Weapon/Sword.o: Items/Weapon/Sword.cpp.o
 
 # target to build an object file
 Items/Weapon/Sword.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Sword.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Sword.cpp.o
 .PHONY : Items/Weapon/Sword.cpp.o
 
 Items/Weapon/Sword.i: Items/Weapon/Sword.cpp.i
@@ -813,7 +813,7 @@ Items/Weapon/Sword.i: Items/Weapon/Sword.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/Sword.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Sword.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Sword.cpp.i
 .PHONY : Items/Weapon/Sword.cpp.i
 
 Items/Weapon/Sword.s: Items/Weapon/Sword.cpp.s
@@ -822,7 +822,7 @@ Items/Weapon/Sword.s: Items/Weapon/Sword.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/Sword.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Sword.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Sword.cpp.s
 .PHONY : Items/Weapon/Sword.cpp.s
 
 Items/Weapon/Wand.o: Items/Weapon/Wand.cpp.o
@@ -831,7 +831,7 @@ Items/Weapon/Wand.o: Items/Weapon/Wand.cpp.o
 
 # target to build an object file
 Items/Weapon/Wand.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Wand.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Wand.cpp.o
 .PHONY : Items/Weapon/Wand.cpp.o
 
 Items/Weapon/Wand.i: Items/Weapon/Wand.cpp.i
@@ -840,7 +840,7 @@ Items/Weapon/Wand.i: Items/Weapon/Wand.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/Wand.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Wand.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Wand.cpp.i
 .PHONY : Items/Weapon/Wand.cpp.i
 
 Items/Weapon/Wand.s: Items/Weapon/Wand.cpp.s
@@ -849,7 +849,7 @@ Items/Weapon/Wand.s: Items/Weapon/Wand.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/Wand.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Wand.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Wand.cpp.s
 .PHONY : Items/Weapon/Wand.cpp.s
 
 Items/Weapon/WarriorWeapon.o: Items/Weapon/WarriorWeapon.cpp.o
@@ -858,7 +858,7 @@ Items/Weapon/WarriorWeapon.o: Items/Weapon/WarriorWeapon.cpp.o
 
 # target to build an object file
 Items/Weapon/WarriorWeapon.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/WarriorWeapon.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/WarriorWeapon.cpp.o
 .PHONY : Items/Weapon/WarriorWeapon.cpp.o
 
 Items/Weapon/WarriorWeapon.i: Items/Weapon/WarriorWeapon.cpp.i
@@ -867,7 +867,7 @@ Items/Weapon/WarriorWeapon.i: Items/Weapon/WarriorWeapon.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/WarriorWeapon.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/WarriorWeapon.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/WarriorWeapon.cpp.i
 .PHONY : Items/Weapon/WarriorWeapon.cpp.i
 
 Items/Weapon/WarriorWeapon.s: Items/Weapon/WarriorWeapon.cpp.s
@@ -876,7 +876,7 @@ Items/Weapon/WarriorWeapon.s: Items/Weapon/WarriorWeapon.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/WarriorWeapon.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/WarriorWeapon.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/WarriorWeapon.cpp.s
 .PHONY : Items/Weapon/WarriorWeapon.cpp.s
 
 Items/Weapon/Weapon.o: Items/Weapon/Weapon.cpp.o
@@ -885,7 +885,7 @@ Items/Weapon/Weapon.o: Items/Weapon/Weapon.cpp.o
 
 # target to build an object file
 Items/Weapon/Weapon.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Weapon.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Weapon.cpp.o
 .PHONY : Items/Weapon/Weapon.cpp.o
 
 Items/Weapon/Weapon.i: Items/Weapon/Weapon.cpp.i
@@ -894,7 +894,7 @@ Items/Weapon/Weapon.i: Items/Weapon/Weapon.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/Weapon.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Weapon.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Weapon.cpp.i
 .PHONY : Items/Weapon/Weapon.cpp.i
 
 Items/Weapon/Weapon.s: Items/Weapon/Weapon.cpp.s
@@ -903,7 +903,7 @@ Items/Weapon/Weapon.s: Items/Weapon/Weapon.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/Weapon.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/Weapon.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/Weapon.cpp.s
 .PHONY : Items/Weapon/Weapon.cpp.s
 
 Items/Weapon/WizardWeapon.o: Items/Weapon/WizardWeapon.cpp.o
@@ -912,7 +912,7 @@ Items/Weapon/WizardWeapon.o: Items/Weapon/WizardWeapon.cpp.o
 
 # target to build an object file
 Items/Weapon/WizardWeapon.cpp.o:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/WizardWeapon.cpp.o
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/WizardWeapon.cpp.o
 .PHONY : Items/Weapon/WizardWeapon.cpp.o
 
 Items/Weapon/WizardWeapon.i: Items/Weapon/WizardWeapon.cpp.i
@@ -921,7 +921,7 @@ Items/Weapon/WizardWeapon.i: Items/Weapon/WizardWeapon.cpp.i
 
 # target to preprocess a source file
 Items/Weapon/WizardWeapon.cpp.i:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/WizardWeapon.cpp.i
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/WizardWeapon.cpp.i
 .PHONY : Items/Weapon/WizardWeapon.cpp.i
 
 Items/Weapon/WizardWeapon.s: Items/Weapon/WizardWeapon.cpp.s
@@ -930,7 +930,7 @@ Items/Weapon/WizardWeapon.s: Items/Weapon/WizardWeapon.cpp.s
 
 # target to generate assembly for a file
 Items/Weapon/WizardWeapon.cpp.s:
-	$(MAKE) -f CMakeFiles/cppEx1.dir/build.make CMakeFiles/cppEx1.dir/Items/Weapon/WizardWeapon.cpp.s
+	$(MAKE) -f CMakeFiles/GAME.dir/build.make CMakeFiles/GAME.dir/Items/Weapon/WizardWeapon.cpp.s
 .PHONY : Items/Weapon/WizardWeapon.cpp.s
 
 # Help Target
@@ -941,7 +941,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... cppEx1"
+	@echo "... GAME"
 	@echo "... Characters/Character.o"
 	@echo "... Characters/Character.i"
 	@echo "... Characters/Character.s"

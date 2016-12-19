@@ -8,7 +8,7 @@
 Wizard::Wizard(): Hero::Hero() {}
 
 Wizard::Wizard(double hp, double xp, Point2d &startLocation, Point2d &endLocation, const string &name, int gender)
-        : Hero(hp, xp, startLocation, endLocation, name, gender), charToPrint('Z') {}
+        : Hero(hp, xp, startLocation, endLocation, name, gender), charToPrint('Z'),typeName("Wizard") {}
 
 Wizard::~Wizard() {
 
@@ -26,3 +26,8 @@ char Wizard::getcharToPrint() {
 string Wizard::toString() {
     return "Wizard "+Hero::toString();
 }
+
+const string &Wizard::getTypeName() {
+    return typeName;
+}
+

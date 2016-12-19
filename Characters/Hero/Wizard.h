@@ -32,6 +32,9 @@ public:
      * Getters and Setters
      *
      */
+
+    const string &getTypeName() override ;
+
     const double getRadius() const;
 
     virtual char getcharToPrint() override ;
@@ -39,6 +42,7 @@ public:
     string toString();
 
 private:
+    string typeName;
     char charToPrint;
     const double radius = 3;
 

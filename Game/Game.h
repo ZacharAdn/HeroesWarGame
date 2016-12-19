@@ -26,15 +26,17 @@ public:
 
     /**
      * the main class of the game
-     * @param adress
+     * @param adress of the input file
      */
     Game(string address);
 
+    virtual ~Game();
+
     /**
      * read from file the data and fill the data structures
-     * @param adress
+     *
      */
-    void read(string address);
+    void read();
 
     /**
      * update the matrix of the game
@@ -50,7 +52,7 @@ public:
 
 
 private:
-//    string address;
+    string address;
     unordered_map<Point2d*,Character*> *Characters;
     vector<Item*> *Items;
     vector<Hero*> *heroes;
@@ -139,7 +141,6 @@ private:
      */
     void updateMove(Hero *source, Point2d *destination);
 
-    const unordered_map<Point2d*,Character*> &getCharacters() const;
 };
 
 

@@ -104,9 +104,6 @@ CMakeFiles/cppEx1.dir/Game/Game.cpp.o
 CMakeFiles/cppEx1.dir/Game/Point2d.cpp.o
  /home/zahar/ClionProjects/cppEx1/Game/Point2d.cpp
  /home/zahar/ClionProjects/cppEx1/Game/Point2d.h
-CMakeFiles/cppEx1.dir/Game/main.cpp.o
- /home/zahar/ClionProjects/cppEx1/Game/Game.h
- /home/zahar/ClionProjects/cppEx1/Game/main.cpp
 CMakeFiles/cppEx1.dir/Game/unitTest.cpp.o
  /home/zahar/ClionProjects/cppEx1/Game/unitTest.cpp
 CMakeFiles/cppEx1.dir/Items/Armor/Armor.cpp.o
@@ -224,3 +221,6 @@ CMakeFiles/cppEx1.dir/Items/Weapon/WizardWeapon.cpp.o
  /home/zahar/ClionProjects/cppEx1/Items/Weapon/Weapon.h
  /home/zahar/ClionProjects/cppEx1/Items/Weapon/WizardWeapon.cpp
  /home/zahar/ClionProjects/cppEx1/Items/Weapon/WizardWeapon.h
+CMakeFiles/cppEx1.dir/main.cpp.o
+ /home/zahar/ClionProjects/cppEx1/Game/Game.h
+ /home/zahar/ClionProjects/cppEx1/main.cpp

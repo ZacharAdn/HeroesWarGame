@@ -1,3 +1,3 @@
 /home/zahar/ClionProjects/cppEx1/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/zahar/ClionProjects/cppEx1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/zahar/ClionProjects/cppEx1/cmake-build-debug/CMakeFiles/cppEx1.dir
+/home/zahar/ClionProjects/cppEx1/cmake-build-debug/CMakeFiles/GAME.dir

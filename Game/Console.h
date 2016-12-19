@@ -38,6 +38,8 @@ public:
 
     virtual ~Console();
 
+    void printToFile(string address,vector<Character*> *outputVec);
+
 private:
     char ** Matrix;
     int rowSize, colSize;

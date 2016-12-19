@@ -8,7 +8,7 @@ Archer::Archer() : Hero::Hero(){}
 
 
 Archer::Archer(double hp, double xp, Point2d &startLocation, Point2d &endLocation, string &name, int gender)
-        : Hero(hp, xp, startLocation, endLocation, name, gender), charToPrint('R') {}
+        : Hero(hp, xp, startLocation, endLocation, name, gender), charToPrint('R'),typeName("Archer") {}
 
 Archer::~Archer() {
 
@@ -24,5 +24,9 @@ char Archer::getcharToPrint() {
 
 string Archer::toString() {
     return "Archer "+Hero::toString();
+}
+
+const string &Archer::getTypeName() {
+    return typeName;
 }
 

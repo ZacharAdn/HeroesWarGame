@@ -9,7 +9,7 @@
 EnemyCharacter::EnemyCharacter() {}
 
 EnemyCharacter::EnemyCharacter(double hp, double xp, Point2d &startLocation, Point2d &endLocation)
-        : Character(hp, xp,startLocation,endLocation) {}
+        : Character(hp, xp,startLocation,endLocation),typeName("Enemy") {}
 
 EnemyCharacter::~EnemyCharacter() {
 
@@ -50,5 +50,9 @@ void EnemyCharacter::setName(const string &name) {
 
 string EnemyCharacter::toString() {
     return "(EnemyCharacter) name:"+getName()+", "+Character::toString();
+}
+
+const string &EnemyCharacter::getTypeName() {
+    return typeName;
 }
 

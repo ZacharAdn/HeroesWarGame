@@ -12,7 +12,7 @@ Warrior::Warrior(): Hero::Hero()
 
 
 Warrior::Warrior(double hp, double xp, Point2d &startLocation, Point2d &endLocation, string &name, int gender)
-        : Hero(hp, xp, startLocation, endLocation, name, gender),charToPrint('A') {}
+        : Hero(hp, xp, startLocation, endLocation, name, gender),charToPrint('A'),typeName("Warrior") {}
 
 Warrior::~Warrior()  {}
 
@@ -28,3 +28,8 @@ char Warrior::getcharToPrint() {
 string Warrior::toString() {
     return "Warrior "+Hero::toString();
 }
+
+const string &Warrior::getTypeName() {
+    return typeName;
+}
+

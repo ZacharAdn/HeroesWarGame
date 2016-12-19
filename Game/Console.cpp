@@ -1,6 +1,7 @@
 //
 // Created by zahar on 07/12/16.
 //
+#include <fstream>
 #include "Console.h"
 #include "Point2d.h"
 #include "../Characters/Character.h"
@@ -56,3 +57,33 @@ void Console::print() {
     }
     cout << "\n";
 }
+
+void Console::printToFile(string address,vector<Character*> *outputVec) {
+
+    size_t index = address.find("_");
+    string newAdress= address.substr(0,index) + "_out.csv";
+    ofstream file (newAdress, ofstream::out);
+
+    cout << "\n\n" << newAdress;
+
+
+
+    file << "\n";
+    for (int i = 0; i < rowSize; ++i) {
+        file << "\n";
+        for (int j = 0; j < colSize; ++j) {
+            file <<  Matrix[i][j];
+            file << "\t";
+        }
+    }
+    file << "\n";
+
+    for (int k = 0; k < outputVec->size(); ++k) {
+        file << "\n"<<outputVec->at(k)->getTypeName() << ": Point:" << outputVec->at(k)->getStartLocation()->toString() <<
+             ", Health:" << to_string(outputVec->at(k)->getHp()) <<", Power:" << to_string(outputVec->at(k)->getXp());
+    }
+
+
+    file.close();
+}
+

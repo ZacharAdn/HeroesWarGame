@@ -42,6 +42,8 @@ public:
 
     const string &getName() const;
 
+    const string &getTypeName() override ;
+
     void setName(const string &name);
 
     virtual string toString();
@@ -49,6 +51,7 @@ public:
 private:
     bool dead = false;
     string name;
+    string typeName;
 
 };
 

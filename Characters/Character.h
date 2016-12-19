@@ -36,7 +36,6 @@ public:
 
     virtual ~Character();
 
-
     /**
      *
      * @return representing char for each Character
@@ -49,10 +48,13 @@ public:
      */
     void damage(double attack);
 
-    /**
+    virtual const string &getTypeName() = 0;
+
+
+    /*
      * Getters and Setters
-     *
      */
+
 
     double getHp() const;
 

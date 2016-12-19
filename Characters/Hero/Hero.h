@@ -104,6 +104,8 @@ public:
      *
      */
 
+    const string &getTypeName() =0 ;
+
     int getGender() const;
 
     void setGender(int gender);

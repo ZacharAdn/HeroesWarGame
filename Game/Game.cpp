@@ -30,12 +30,12 @@ Game::Game(string adress)
           Characters(new unordered_map<Point2d*,Character*>()), Items(new vector<Item*>()),
           outputVec(new vector<Character*>())
 {
-    read(adress);
+    read();
     play();
 }
 
 
-void Game::read(string address) {
+void Game::read() {
     ifstream file (address, ifstream::in);
     string value;
     int heroCounter= 0,enemyCounter=0;
@@ -139,7 +139,7 @@ void Game::read(string address) {
 
     //send to console to init and print
     console = new Console(MatRowSize, MatColSize);
-    console->fillData(Characters, Items,Matrix);
+    console->fillData(Characters, Items ,Matrix);
     cout << "start mat:";
     console->print();
     cout << "\n\n";
@@ -156,7 +156,6 @@ void Game::play() {
 
     //the main loop, runs till all the heroes died or got to the destination
     while(!heroes->empty()) {
-//        cout<< "\n\nheroes size: " << heroes->size() << ", j: "<<j;
         size_t j=0;
         while(j < heroes->size()){
             hero = heroes->at(j);
@@ -191,6 +190,7 @@ void Game::play() {
             j++;
         }
     }
+    console->printToFile(address, outputVec);
 }
 
 
@@ -278,7 +278,7 @@ void Game::calcHeroTrack(Hero *hero) {
 }
 
 void Game::scanForItems(Hero *hero) {
-    int i = 0;
+    size_t i = 0;
 
     while(i < Items->size()){
         hero->takesNewItem(false);
@@ -395,5 +395,8 @@ Point2d *Game::checkBounds(Point2d *location, Hero *hero) {
 bool Game::isStillEnemy(EnemyCharacter *enemy) {
     return enemy->isDead();
 }
+
+Game::~Game() {
+};
 
 

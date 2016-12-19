@@ -101,6 +101,8 @@ Hero.h
 /home/zahar/ClionProjects/cppEx1/Characters/Hero/Hero.h
 
 /home/zahar/ClionProjects/cppEx1/Game/Console.cpp
+fstream
+-
 Console.h
 /home/zahar/ClionProjects/cppEx1/Game/Console.h
 Point2d.h
@@ -172,14 +174,6 @@ Point2d.h
 
 /home/zahar/ClionProjects/cppEx1/Game/Point2d.h
 string
--
-
-/home/zahar/ClionProjects/cppEx1/Game/main.cpp
-iostream
--
-Game.h
-/home/zahar/ClionProjects/cppEx1/Game/Game.h
-fstream
 -
 
 /home/zahar/ClionProjects/cppEx1/Game/unitTest.cpp
@@ -341,4 +335,10 @@ WizardWeapon.h
 /home/zahar/ClionProjects/cppEx1/Items/Weapon/WizardWeapon.h
 Weapon.h
 /home/zahar/ClionProjects/cppEx1/Items/Weapon/Weapon.h
+
+/home/zahar/ClionProjects/cppEx1/main.cpp
+iostream
+-
+Game/Game.h
+/home/zahar/ClionProjects/cppEx1/Game/Game.h
 

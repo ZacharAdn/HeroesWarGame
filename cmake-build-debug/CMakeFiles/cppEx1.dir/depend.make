@@ -104,9 +104,6 @@ CMakeFiles/cppEx1.dir/Game/Game.cpp.o: ../Items/Weapon/WizardWeapon.h
 CMakeFiles/cppEx1.dir/Game/Point2d.cpp.o: ../Game/Point2d.cpp
 CMakeFiles/cppEx1.dir/Game/Point2d.cpp.o: ../Game/Point2d.h
 
-CMakeFiles/cppEx1.dir/Game/main.cpp.o: ../Game/Game.h
-CMakeFiles/cppEx1.dir/Game/main.cpp.o: ../Game/main.cpp
-
 CMakeFiles/cppEx1.dir/Game/unitTest.cpp.o: ../Game/unitTest.cpp
 
 CMakeFiles/cppEx1.dir/Items/Armor/Armor.cpp.o: ../Characters/Character.h
@@ -223,4 +220,7 @@ CMakeFiles/cppEx1.dir/Items/Weapon/WizardWeapon.cpp.o: ../Items/Item.h
 CMakeFiles/cppEx1.dir/Items/Weapon/WizardWeapon.cpp.o: ../Items/Weapon/Weapon.h
 CMakeFiles/cppEx1.dir/Items/Weapon/WizardWeapon.cpp.o: ../Items/Weapon/WizardWeapon.cpp
 CMakeFiles/cppEx1.dir/Items/Weapon/WizardWeapon.cpp.o: ../Items/Weapon/WizardWeapon.h
+
+CMakeFiles/cppEx1.dir/main.cpp.o: ../Game/Game.h
+CMakeFiles/cppEx1.dir/main.cpp.o: ../main.cpp
 

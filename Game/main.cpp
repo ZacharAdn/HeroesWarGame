@@ -1,19 +1,22 @@
 #include <iostream>
 #include "Game.h"
 
-#include <fstream>
+int main(int argc, char* argv[]) {
 
-int main() {
+    if (argc < 1)
+        exit(0);
+    if (argv[1] == std::string("-help")){
+        cout << "-n [number] -files[file1 file2 ...]" << endl;
+        exit(0);
+    }
 
-
-//    unordered_map<Point2d*,Character*> *map = new unordered_map<Point2d*,Character*>;
-    vector<Item*> *vec = new vector<Item*> ();
-    char** mat = nullptr ;
-
-    string adr= "/home/zahar/ClionProjects/cppEx1/input/input1.csv";
-
-    Game *g = new Game(adr);
-
+    Game *g = nullptr;
+    for (int i = 0; i < stod(argv[2]); i++){
+         g = new Game(argv[4+i]);
+        delete(g);
+    }
+//
+//    delete (g);
 
     return 0;
 }
