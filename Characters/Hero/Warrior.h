@@ -26,6 +26,12 @@ public:
 
     virtual ~Warrior();
 
+
+    /**
+     * Getters and Setters
+     *
+     */
+
     const double getRadius() const;
 
     virtual char getcharToPrint() override ;

@@ -26,14 +26,17 @@
 
 
 Game::Game(string adress)
-        : adress(adress), heroes(new vector<Hero*>()), enemies(new vector<EnemyCharacter*>()),
+        :  heroes(new vector<Hero*>()), enemies(new vector<EnemyCharacter*>()),
           Characters(new unordered_map<Point2d*,Character*>()), Items(new vector<Item*>()),
           outputVec(new vector<Character*>())
-{}
+{
+    read(adress);
+    play();
+}
 
 
-void Game::read() {
-    ifstream file (adress, ifstream::in);
+void Game::read(string address) {
+    ifstream file (address, ifstream::in);
     string value;
     int heroCounter= 0,enemyCounter=0;
 
@@ -145,7 +148,6 @@ void Game::read() {
 void Game::play() {
     Hero *hero= nullptr;
     Point2d *source= nullptr,*nextPoint= nullptr;
-    size_t j;
 
     //calculate the direction and the distance to the destination for every hero
     for (size_t i = 0; i < heroes->size(); ++i) {
@@ -154,11 +156,13 @@ void Game::play() {
 
     //the main loop, runs till all the heroes died or got to the destination
     while(!heroes->empty()) {
+//        cout<< "\n\nheroes size: " << heroes->size() << ", j: "<<j;
+        size_t j=0;
         while(j < heroes->size()){
             hero = heroes->at(j);
-
             //if hero at war he cant continue play
             if (!hero->isAtWar()) {
+
                 scanForItems(hero);
                 scanForEnemies(hero);
             }
@@ -274,10 +278,10 @@ void Game::calcHeroTrack(Hero *hero) {
 }
 
 void Game::scanForItems(Hero *hero) {
-    size_t i = 0;
-    hero->takesNewItem(false);
+    int i = 0;
 
     while(i < Items->size()){
+        hero->takesNewItem(false);
         if(isInRange(Items->at(i)->getLocation(), hero)){
             Items->at(i)->acceptToUse(hero);//visitor design pattern, takes the item by the hero
             if(hero->isTakeNewItem()){
@@ -286,8 +290,8 @@ void Game::scanForItems(Hero *hero) {
                     Items->push_back(hero->getThrownArmor());
                     hero->throwTheArmor(nullptr);
                 }
-                i--;
                 update("Item", Items->at(i)->getName());
+                i--;
             }
         }
         i++;
@@ -337,33 +341,38 @@ void Game::WAR(Hero *hero) {
 }
 
 Point2d *Game::getNextPoint(Hero *hero) {
+    int X=hero->getStartLocation()->getX();
+    int Y=hero->getStartLocation()->getY();
+    int sideX = hero->getSideX();
+    int sideY = hero->getSideY();
+
     if(hero->getDistanceX() > 0 && hero->getDistanceY() >0){// go in slant
         hero->setDistanceX(hero->getDistanceX()-1);
         hero->setDistanceY(hero->getDistanceY()-1);
 
         //check the directions
-        if(hero->getSideX()==POSITIVE_SIDE && hero->getSideY()==POSITIVE_SIDE){
-            return checkBounds(new Point2d(hero->getStartLocation()->getX() + 1, hero->getStartLocation()->getY() + 1),hero);;
-        }else if(hero->getSideX()==NEGATIVE_SIDE && hero->getSideY()==NEGATIVE_SIDE){
-            return checkBounds(new Point2d(hero->getStartLocation()->getX()-1,hero->getStartLocation()->getY()-1),hero);;
-        }else if(hero->getSideX()==NEGATIVE_SIDE && hero->getSideY()==POSITIVE_SIDE){
-            return checkBounds(new Point2d(hero->getStartLocation()->getX()-1,hero->getStartLocation()->getY()+1),hero);
-        }else if(hero->getSideX()==POSITIVE_SIDE && hero->getSideY()==NEGATIVE_SIDE){
-            return checkBounds(new Point2d(hero->getStartLocation()->getX()+1,hero->getStartLocation()->getY()-1),hero);
+        if(sideX==POSITIVE_SIDE && sideY==POSITIVE_SIDE){
+            return checkBounds(new Point2d(X+ 1, Y+ 1),hero);;
+        }else if(sideX==NEGATIVE_SIDE && sideY==NEGATIVE_SIDE){
+            return checkBounds(new Point2d(X-1,Y-1),hero);;
+        }else if(sideX==NEGATIVE_SIDE && sideY==POSITIVE_SIDE){
+            return checkBounds(new Point2d(X-1,Y+1),hero);
+        }else if(sideX==POSITIVE_SIDE && sideY==NEGATIVE_SIDE){
+            return checkBounds(new Point2d(X+1,Y-1),hero);
         }
     }else if(hero->getDistanceX() == 0 && hero->getDistanceY() >0){
         hero->setDistanceY(hero->getDistanceY()-1);
-        if(hero->getSideY() == POSITIVE_SIDE){
-            return checkBounds(new Point2d(hero->getStartLocation()->getX(),hero->getStartLocation()->getY()+1),hero);
+        if(sideY == POSITIVE_SIDE){
+            return checkBounds(new Point2d(X,Y+1),hero);
         }else{
-            return checkBounds(new Point2d(hero->getStartLocation()->getX(),hero->getStartLocation()->getY()-1),hero);
+            return checkBounds(new Point2d(X,Y-1),hero);
         }
     }else if(hero->getDistanceY() == 0 && hero->getDistanceX() >0){
         hero->setDistanceX(hero->getDistanceX()-1);
-        if(hero->getSideX() == POSITIVE_SIDE){
-            return checkBounds(new Point2d(hero->getStartLocation()->getX()+1,hero->getStartLocation()->getY()),hero);
+        if(sideX == POSITIVE_SIDE){
+            return checkBounds(new Point2d(X+1,Y),hero);
         }else{
-            return checkBounds(new Point2d(hero->getStartLocation()->getX()-1,hero->getStartLocation()->getY()),hero);
+            return checkBounds(new Point2d(X-1,Y),hero);
         }
     }else if(hero->getDistanceY() == 0 && hero->getDistanceX() == 0){
         cout <<"\nGAME OVER";
@@ -381,10 +390,6 @@ Point2d *Game::checkBounds(Point2d *location, Hero *hero) {
     }
 
     return currectLocation;
-}
-
-const unordered_map<Point2d*,Character*> &Game::getCharacters() const {
-    return *Characters;
 }
 
 bool Game::isStillEnemy(EnemyCharacter *enemy) {

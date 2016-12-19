@@ -23,6 +23,10 @@ public:
 
     virtual ~Elite();
 
+    /**
+     * Getters and Setters
+     *
+     */
     virtual char getcharToPrint() override ;
 
     string toString();

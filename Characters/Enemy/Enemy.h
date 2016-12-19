@@ -27,6 +27,11 @@ public:
 
     virtual ~Enemy();
 
+
+    /**
+     * Getters and Setters
+     *
+     */
     virtual char getcharToPrint() override ;
 
     string toString();

@@ -25,6 +25,12 @@ public:
 
     virtual ~Archer();
 
+
+    /**
+     * Getters and Setters
+     *
+     */
+
     const double getRadius() const;
 
     virtual char getcharToPrint() override ;

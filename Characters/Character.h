@@ -49,6 +49,11 @@ public:
      */
     void damage(double attack);
 
+    /**
+     * Getters and Setters
+     *
+     */
+
     double getHp() const;
 
     void setHp(double hp);
@@ -66,7 +71,6 @@ public:
     void setEndLocation(Point2d *endLocation);
 
     virtual string toString();
-
 
 };
 

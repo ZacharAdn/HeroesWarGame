@@ -58,15 +58,23 @@ void Hero::checkAndTakeWeapon(Weapon *pWeapon) {
 
 void Hero::use(Potion *potion) {
 
-    if(potion->getName() == "mana" || getName() == "Wizard") {
-        setHp(getHp() + potion->getAmount());
-        if (getHp() > FULL) {
-            setHp(FULL);
-        }
-        cout <<"\n" << getName() << " takes " << potion->getName()<< ", amount:"<<potion->getAmount();
-        cout <<"\n"<<toString();
-        takesNewItem(true);
+    if(potion->getName() == "mana" && getName() == "Wizard") {
+        takePotion(potion);
+    }else if(potion->getName() == "health"){
+        takePotion(potion);
     }
+}
+
+void Hero::takePotion(Potion *potion) {
+    setHp(getHp() + potion->getAmount());
+    if (getHp() > FULL) {
+        setHp(FULL);
+    }
+    cout <<"\n" << getName() << " takes " << potion->getName()<< ", amount:"<<potion->getAmount();
+    cout <<"\n"<<toString();
+    takesNewItem(true);
+
+
 }
 
 void Hero::use(BodyArmor *bodyArmor) {
@@ -96,8 +104,10 @@ void Hero::move(Point2d *dest) {
 
 }
 
+
+
 void Hero::attack(EnemyCharacter *enemy) {
-    cout <<"\n" << toString() << " \nATTACK\n " << enemy->toString();
+    cout <<"\n" << toString() << " \nATTACK\n" << enemy->toString();
     double attack = getXp();
     if(getWeapon() != nullptr){
         attack *= getWeapon()->getWeaponPower();
@@ -106,8 +116,6 @@ void Hero::attack(EnemyCharacter *enemy) {
     enemy->damage(attack);
     cout << "\nHP enemy after damage: " << enemy->getHp()<<"\n";
 }
-
-
 
 const string &Hero::getName() const {
     return name;
@@ -169,43 +177,43 @@ double Hero::getDistanceY() const {
     return distanceY;
 }
 
+
 void Hero::setDistanceY(double distanceY) {
     Hero::distanceY = distanceY;
 }
-
 
 bool Hero::isAtWar() const {
     return atWar;
 }
 
+
 void Hero::setAtWar(bool atWar) {
     Hero::atWar = atWar;
 }
-
 
 Weapon *Hero::getWeapon() const {
     return weapon;
 }
 
+
 void Hero::setWeapon(Weapon *weapon) {
     Hero::weapon = weapon;
 }
 
-
 void Hero::setEnemyToWar(EnemyCharacter *enemy) {
     Hero::enemyToWar=enemy;
 }
+
 
 EnemyCharacter *Hero::getEnemyToWar() const {
     return enemyToWar;
 }
 
 
+
 void Hero::takesNewItem(bool b) {
     Hero::newItem = b;
 }
-
-
 
 bool Hero::isTakeNewItem() const {
     return newItem;

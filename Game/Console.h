@@ -45,4 +45,4 @@ private:
 };
 
 
-//#endif //CPPEX1_CONSOLE_H
+#endif //CPPEX1_CONSOLE_H

@@ -107,8 +107,6 @@ Point2d.h
 /home/zahar/ClionProjects/cppEx1/Game/Point2d.h
 ../Characters/Character.h
 /home/zahar/ClionProjects/cppEx1/Characters/Character.h
-../Items/Item.h
-/home/zahar/ClionProjects/cppEx1/Items/Item.h
 
 /home/zahar/ClionProjects/cppEx1/Game/Console.h
 unordered_map

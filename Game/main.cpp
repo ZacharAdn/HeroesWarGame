@@ -10,13 +10,9 @@ int main() {
     vector<Item*> *vec = new vector<Item*> ();
     char** mat = nullptr ;
 
-    string adr= "/home/zahar/ClionProjects/cppEx1/input/input2.csv";
+    string adr= "/home/zahar/ClionProjects/cppEx1/input/input1.csv";
 
-    Game *g = new Game();//,mat);
-
-    g->read(adr);
-//    g->update();
-    g->play();
+    Game *g = new Game(adr);
 
 
     return 0;

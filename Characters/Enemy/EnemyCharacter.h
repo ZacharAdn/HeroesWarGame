@@ -31,6 +31,11 @@ public:
      */
     void attack(Hero *hero);
 
+
+    /**
+     * Getters and Setters
+     *
+     */
     bool isDead() const;
 
     void setDead(bool dead);

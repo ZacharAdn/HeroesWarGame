@@ -27,6 +27,11 @@ public:
 
     virtual ~Wizard();
 
+
+    /**
+     * Getters and Setters
+     *
+     */
     const double getRadius() const;
 
     virtual char getcharToPrint() override ;

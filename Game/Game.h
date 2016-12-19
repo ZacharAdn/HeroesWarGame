@@ -10,7 +10,7 @@ using namespace std;
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-#define FULL_HP 100
+#define FULL_HP 100// full health power
 class Character;
 class Point2d;
 class Item;
@@ -32,8 +32,9 @@ public:
 
     /**
      * read from file the data and fill the data structures
+     * @param adress
      */
-    void read();
+    void read(string address);
 
     /**
      * update the matrix of the game
@@ -43,13 +44,13 @@ public:
     void update(const string &type, const string &name);
 
     /**
-     *the main loop of the game
+     *the main loop of the game, run all the heroe's to progress on their way
      */
     void play();
 
 
 private:
-    string address;
+//    string address;
     unordered_map<Point2d*,Character*> *Characters;
     vector<Item*> *Items;
     vector<Hero*> *heroes;

@@ -84,11 +84,25 @@ public:
      */
     virtual const double getRadius() const = 0;
 
+    /**
+     * return armor to the matrix if the hero drop hem
+     * @param pArmor
+     */
     void throwTheArmor(ShieldArmor *pArmor);
 
+    /**
+     *
+     * @return hero name
+     */
     const string &getName() const;
 
     void setName(const string &name);
+
+
+    /**
+     * Getters and Setters
+     *
+     */
 
     int getGender() const;
 
@@ -158,6 +172,11 @@ private:
      */
     void checkAndTakeWeapon(Weapon *pWeapon);
 
+    /**
+     * takes the right potion
+     * @param potion
+     */
+    void takePotion(Potion *potion);
 };
 
 
